@@ -1,0 +1,82 @@
+/*
+colours
+db = #022F40
+purp = #5F4BB6
+lpurp = #86A5D9
+teal = #58A4B0
+whiteish = #F5F3F5
+*/
+
+ul, h1, h2, h3, h4, h5,h6 {
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background:#022F40;
+	color: #F5F3F5;
+}
+
+.container{
+	margin: 25px auto;
+	width: 100%;
+	max-width: 400px;
+
+}
+
+.strike{
+	text-decoration: line-through;
+}
+
+/*form section*/
+
+.clearCtrls button{
+	margin: 1em 0;
+}
+
+#mainHead{
+	padding-top: 1em;
+	text-align: center;
+}
+
+form[name="tasksForm"]{
+	margin-top: 1em;
+}
+
+/*tasks section*/
+
+.listTxt{
+	font-size: 1.2em;
+	margin:0;
+}
+
+#itemLst{
+	min-width: 280px;
+}
+
+ul{
+	list-style: none;
+	list-style-position: inside;
+}
+
+li{
+	border-bottom: 1px solid #58A4B0;
+	padding: 1em;
+	width:100%;
+	word-wrap: break-word;
+}
+
+li:last-child{
+	margin-bottom: 2em;
+}
+
+
+/*responsive*/
+
+@media (min-width: 450px){
+	.container{
+		border: 1px solid white;
+		border-radius: 10px;
+	}
+}
+
