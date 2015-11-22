@@ -45,9 +45,41 @@ form[name="tasksForm"]{
 
 /*tasks section*/
 
-.listTxt{
-	font-size: 1.2em;
-	margin:0;
+.lstChkbox{
+	position:relative;
+}
+
+.lstChkbox input[type="checkbox"]{
+	display:none;
+}
+
+.lstChkbox svg{
+	position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  left:0;
+  border: 2px solid #F5F3F5;
+  stroke-width:2;
+}
+
+.lstChkbox label{
+	color: #F5F3F5;
+  font-size:1.5em;
+  padding-left:40px;
+  word-wrap:break-word;
+  cursor:pointer;
+	display:inline-block;
+  vertical-align:top;
+}
+
+.lstChkbox path{
+	stroke-dashoffset:220;
+  stroke-dasharray:220;
+  transition:stroke-dashoffset 0.2s linear;
+}
+
+.lstChkbox input[type="checkbox"]:checked + svg path{
+  stroke-dashoffset:0;
 }
 
 #itemLst{
@@ -63,7 +95,6 @@ li{
 	border-bottom: 1px solid #58A4B0;
 	padding: 1em;
 	width:100%;
-	word-wrap: break-word;
 }
 
 li:last-child{

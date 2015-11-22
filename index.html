@@ -33,15 +33,7 @@
 		<div id="itemLst">
 			<ul>
 				<li ng-repeat="toDo in toDos track by $index" >
-					<div class="row">
-						<div class="col-xs-1">
-							<input type="checkbox" ng-model="toDo.done">
-						</div>
-						<div class="col-xs-10" ng-class="{strike: toDo.done}">
-							<p class="listTxt">{{toDo.item}}</p>
-							<lst-Chkbox check-id="{{'customChk'+$index}}" ng-model="toDo.done"></lst-Chkbox>
-							{{toDo.done}}
-						</div>
+							<lst-Chkbox box-size="30"check-id="{{'customChk'+$index}}" stroke-Col="#58A4B0" value= "toDo.item" ng-model="toDo.done"></lst-Chkbox>
 					</div>
 				</li>
 			</ul>

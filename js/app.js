@@ -56,12 +56,22 @@ myApp.directive("lstChkbox", function(){
 		restrict:'AE',
 		replace:true,
 		scope: {
+			boxSize: '@',
 			checkId: '@',
+			strokeCol: '@',
+			value: '=',
 			ngModel: '='
 		},
 		template: '<div class="lstChkbox">' + 
-			'<label for="{{checkId}}">label</label> ' +
+			'<label for="{{checkId}}">{{value}}</label>' +
 			'<input type="checkbox" ng-model="ngModel" id={{checkId}} />'+ 
+			'<svg width="{{boxSize}}"+"px" height="{{boxSize}}" + "px" viewBox=" 0 0 40 40">' +
+				'<path fill="none" stroke="{{strokeCol}}" d="M17,2C14.763,3.705,5.04,6.792,5.739,9.865' +
+	        'c0.525,2.311,19.999,0.851,22.575,0.755c-2.663,0.559-5.151,1.594-7.747,2.382c-3.352,1.017-8.123,1.236-10.839,3.563' +
+	        'c4.168,0.508,8.488-0.91,12.503-0.471c-2.804,2.072-12.26,4.851-13.73,8.155c4.163,2.611,20.343-7.723,24.834-6.917' +
+	        'C30.395,18.826,10,30.75,7.5,33.083s23.239-7.453,25.667-7.833c-2.007,1.341-12.444,4.937-12.831,7.466' +
+	        'c3.796,2.124,9.823-0.316,13.276,1.936c-0.229,0.396-6.344,3.66-6.612,4.099c2.191,0.104,8.943-4.084,11.266-4.363" />' +
+   		'</svg>' +
 			'</div>'
 	};
 });
