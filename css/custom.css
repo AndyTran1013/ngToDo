@@ -24,10 +24,6 @@ body{
 
 }
 
-.strike{
-	text-decoration: line-through;
-}
-
 /*form section*/
 
 .clearCtrls button{
@@ -44,7 +40,7 @@ form[name="tasksForm"]{
 }
 
 /*tasks section*/
-
+/*******************Classess for lst-Chkbox Directive**************************/
 .lstChkbox{
 	position:relative;
 }
@@ -78,10 +74,10 @@ form[name="tasksForm"]{
   transition:stroke-dashoffset 0.2s linear;
 }
 
-.lstChkbox input[type="checkbox"]:checked + svg path{
+.lstChkbox input[type="checkbox"]:checked + label svg path{
   stroke-dashoffset:0;
 }
-
+/******************************************************************************/
 #itemLst{
 	min-width: 280px;
 }

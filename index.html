@@ -5,8 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 	<link href="css/custom.css" rel="stylesheet" type="text/css">
-	<script src="js/angular.min.js"></script>
-	<script src="js/app.js"></script>
 	<title>To Do!</title>
 </head>
 
@@ -15,6 +13,7 @@
 	<div ng-controller="toDoCtrl" class="container">
 		<div id="mainHead">
 			<h1>{{remaining()}} Items Left to Do!</h1>
+
 			<form class="form-inline" name="tasksForm" ng-submit="addTask()" autocomplete="off">
 				<div class="input-group">
 					<input class="form-control input-sm" type="text" name="tasks" ng-model="task" required>
@@ -25,19 +24,24 @@
 					</div>
 				</div>
 			</form>
+
 			<div class="clearCtrls">
 				<button class="btn btn-default btn-sm" ng-click="clearComplete()">Clear Completed</button>
 				<button class="btn btn-default btn-sm" ng-click="clearAll()">Clear All</button>
 			</div>
+
 		</div>
+
 		<div id="itemLst">
 			<ul>
 				<li ng-repeat="toDo in toDos track by $index" >
-							<lst-Chkbox box-size="30"check-id="{{'customChk'+$index}}" stroke-Col="#58A4B0" value= "toDo.item" ng-model="toDo.done"></lst-Chkbox>
-					</div>
+					<lst-Chkbox box-size="30"check-id="{{'customChk'+$index}}" stroke-Col="#58A4B0" ng-model="toDo.done">{{toDo.item}}</lst-Chkbox>
 				</li>
 			</ul>
 		</div>
 	</div>
+
+	<script src="js/angular.min.js"></script>
+	<script src="js/app.js"></script>
 </body>
 </html>
